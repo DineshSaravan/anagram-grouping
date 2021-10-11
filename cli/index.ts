@@ -1,0 +1,1 @@
+export { startCLI } from "./cli";
