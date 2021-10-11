@@ -49,7 +49,7 @@ export async function readLineByLine(path: string, cb: (line: string) => void) {
 
   rl.on('close', function () {
     printAnagramGroups();
-    // print linecount of file
+    // print line count of file
     console.log("Total number of lines in file: ", lineCount);
   });
 }
@@ -61,7 +61,7 @@ export function wordFormat(word: string): string {
 }
 
 function printAnagramGroups(): void {
-  anagrams.forEach((value: Set<string>, keyIgnored: string) => {
+  anagrams.forEach((value: Set<string>) => {
     // printing out in console grouped anagram words
     let anagramGroupText: string = Array.from(value).join(', ');
     console.log(anagramGroupText);
