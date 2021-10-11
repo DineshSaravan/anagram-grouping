@@ -1,0 +1,1 @@
+export { groupAnagramsFromFile } from './anagram';
