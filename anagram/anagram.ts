@@ -39,6 +39,8 @@ export async function readLineByLine(path: string, cb: (line: string) => void) {
     crlfDelay: Infinity,
   });
 
+  console.time('File read time:');
+
   rl.on('line', function (line) {
     // increment line count on every line read
     lineCount++;
@@ -49,7 +51,10 @@ export async function readLineByLine(path: string, cb: (line: string) => void) {
 
   rl.on('close', function () {
     printAnagramGroups();
-    // print line count of file
+
+    console.timeEnd('File read time:');
+    const used = process.memoryUsage().heapUsed / 1024 / 1024;
+    console.log(`Memory used approximately : ${Math.round(used * 100) / 100} MB`);
     console.log("Total number of lines in file: ", lineCount);
   });
 }
