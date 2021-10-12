@@ -56,7 +56,7 @@ export async function readLineByLine(path: string, cb: (line: string) => void) {
 
   /*
   * Readline - code implementation
-  */
+  * Added experiment details in Readme.md
   /*
   const rl = readline.createInterface({
     input: fileStream,

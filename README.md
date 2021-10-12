@@ -76,13 +76,18 @@ Used HashMap to store groups of anagrams data read from the file.
 * @key ```string``` - Alphabetised word for each anagram group is stored as key.
 * @value ```Set<string>``` - To store multiple anagram words mapped to a singe key group, I used ```Set``` data structure which supports our requirement by storing only unique anagram words to a group and in a specified order.
 
+### Big O Analysis
+* Time Complexity: O(N K log K), where N is the length of words from file, and K is the maximum
+length of a word in file. File reading contents has the complexity of O(N) and as we iterate through
+each word. Then, we sort each string in O(K log K) time.
+* Space Complexity: O(N), total words printed out in output
+
 ### Future improvements
 On given more time, I would improve this project by:
 * Add a client UI to upload a file and generate the anagram groups by displaying the groups data in table view format.
 * Improvised deployment strategy to deploy application in docker container and attach automated tests using CI pipeline.
 * Add logging configurations to track file data contexts (eg: invalid words in the file can be skipped and added in the logs along with count).
 * Performance improvements on huge file data. Also add metrics to visualise in graphs to monitor time, heap and memory usages.
-
 
 ## Experiments
 I performed two experiments on reading the file contents using below methods to monitor the performance
