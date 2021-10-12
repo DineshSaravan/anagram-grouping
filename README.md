@@ -133,7 +133,7 @@ const fileStream = fs.createReadStream(filePath);
 
 As a result of the experiment on testing with three different [datasets](/data) of different sizes, 
 both method implementation stated above successfully executed and the performance were almost same on 
-both implementation. One of the experiments results is show below, which is approximate (~) for both method implementation.
+both implementation. One of the experiments results is show below, where data presented is appropriate for both method implementation.
 
 | FileName | File Size | File ReadTime | Memory Used | File linesCount
 | --- | --- | --- | --- | --- |
